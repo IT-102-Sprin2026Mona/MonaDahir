@@ -2,23 +2,24 @@
 # Sample script that writes to a file
 # By Ed Goad
 # 12/12
+"""
+Write a script that saves user input into a file, that gathers data about the user
+"""
 
-import os
+#These variables are questions that need to be answerd
+name = input("What is your name? ")
+color = input("What is your favorite color? ")
+pet = input("What is your first pets name? ")
+maiden = input("What is your mother maiden name? ")
+school = input("What elementry school did you intend? ")
 
-# Get current file directory
-script_path = os.path.abspath( __file__ )
-script_dir = os.path.dirname( script_path )
-# Build file path
-file_path = os.path.join(script_dir, "testfile.txt")
+with open("hackme.txt", "w") as file:
+    file.write(f"Name: {name}\n")
+    file.write(f"favorite Cole: {color}\n")
+    file.write(f"First Pet: {pet}\n")
+    file.write(f"Mothers Maiden Name: {maiden}\n")
+    file.write(f"Elementary School: {school}\n")
 
-# Open file for writing
-test_file = open(file_path, "w")
+print("Saved to kackme.txt Great work!")
 
-# Write lines to the file
-test_file.write( "Hello World\n" )
-test_file.write( "My name is Ed\n" )
-test_file.write( "I like rubber ducks\n" )
-
-# Close the file
-test_file.close()
 
