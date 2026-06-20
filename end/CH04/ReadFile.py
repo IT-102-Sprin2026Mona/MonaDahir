@@ -7,7 +7,7 @@ This is to read the file i created from the script writefile.py
 
 
 #Create a loop to open file and read its contents
-with open("hackme.txt", "r") as file 
+with open("hackme.txt", "r") as file: 
     contents = file.read()
 print("hete is someone to hack - info dump")
 print(contents)
