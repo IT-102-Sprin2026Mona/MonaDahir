@@ -15,8 +15,3 @@ elif answer == "n":
     print("Im sorry")
 else: 
     print("Please try again")
-
-
-
-
-
